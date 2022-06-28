@@ -18,7 +18,10 @@ class ApiResource {
       // tenantUrl = window.location.hostname;
       //   baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
       //   tenantUrl = "staging2.ellieeats.sg";
-      if (window.location.hostname === "localhost") {
+      if (
+        window.location.hostname === "localhost" ||
+        window.location.hostname === "ttos-28-06.vercel.app"
+      ) {
         baseUrl = process.env.NEXT_PUBLIC_DEV_BASE_URL;
         tenantUrl = process.env.NEXT_PUBLIC_DEV_TENANT_URL;
       } else {
@@ -47,7 +50,10 @@ class ApiResource {
       //   const API_key = "8ee4c3eb-89a2-41be-b37a-6b9cb056f968";
       //   const secret_key =
       //     "$2a$10$5wQ.RXhOZd7NWQ54Z5q/DuOhD9MfKFbsmX/t5Eo7bO0qPoWCShOdK";
-      if (window.location.hostname === "localhost") {
+      if (
+        window.location.hostname === "localhost" ||
+        window.location.hostname === "ttos-28-06.vercel.app"
+      ) {
         const API_key = process.env.NEXT_PUBLIC_DEV_API_KEY;
         const secret_key = process.env.NEXT_PUBLIC_DEV_SECRET_KEY;
         const api_secret = API_key + ":" + secret_key;
